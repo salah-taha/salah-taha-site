@@ -137,8 +137,8 @@ if (!reduced) {
   gsap.to('.timeline__rail i', { scaleY: 1, ease: 'none', scrollTrigger: { trigger: '.timeline', start: 'top 60%', end: 'bottom 60%', scrub: true } })
 
   // Batal phones spread apart as the card comes in
-  gsap.from('.phone--l', { xPercent: 45, rotate: 0, scrollTrigger: { trigger: '.proj__vis--phones', start: 'top 95%', end: 'top 35%', scrub: 0.5 } })
-  gsap.from('.phone--r', { xPercent: -45, rotate: 0, scrollTrigger: { trigger: '.proj__vis--phones', start: 'top 95%', end: 'top 35%', scrub: 0.5 } })
+  gsap.from('.phone--l', { xPercent: 45, rotate: 0, scrollTrigger: { trigger: '.proj__vis--phones', start: 'top 80%', end: 'top 35%', scrub: 0.5 } })
+  gsap.from('.phone--r', { xPercent: -45, rotate: 0, scrollTrigger: { trigger: '.proj__vis--phones', start: 'top 80%', end: 'top 35%', scrub: 0.5 } })
 
   // stacked project cards: the one underneath shrinks back as the next slides over it
   ScrollTrigger.matchMedia({
