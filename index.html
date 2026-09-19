@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salah Taha — Senior Software Engineer · Flutter & .NET</title>
+  <meta name="description" content="Salah Taha is a senior software engineer in Cairo building real-time systems: Flutter apps, distributed .NET backends on AWS, and an open-source MQTT broker written in pure Dart." />
+  <meta property="og:title" content="Salah Taha — engineer of things that talk in real time" />
+  <meta property="og:description" content="Flutter, .NET, AWS, MQTT. This portfolio is a message broker. Connect and subscribe." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ebe6dc" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t } catch (e) {}
+  </script>
+</head>
+<body class="is-loading">
+  <!-- handshake preloader -->
+  <div class="loader" aria-hidden="true">
+    <pre class="loader__log"></pre>
+    <div class="loader__count"><span>0</span>%</div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
+
+  <header class="bar">
+    <a href="#top" class="bar__id" data-cursor="top"><i class="dot"></i><span>CONNECTED</span><em>· client <b data-client-id>visitor</b></em></a>
+    <nav class="bar__nav">
+      <a href="#about" data-cursor="01">about</a>
+      <a href="#work" data-cursor="02">work</a>
+      <a href="#projects" data-cursor="03">projects</a>
+      <a href="#terminal" data-cursor="04">subscribe</a>
+      <a href="#contact" data-cursor="05">contact</a>
+    </nav>
+    <div class="bar__meta">
+      <span>CAI <b data-clock>--:--:--</b></span>
+      <button class="theme" type="button" aria-label="Toggle colour theme" data-cursor="invert"><i></i></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas class="hero__net" aria-hidden="true"></canvas>
+      <h1 class="hero__name" aria-label="Salah Taha">
+        <span class="hero__line" data-letters>SALAH</span>
+        <span class="hero__line hero__line--2"><span data-letters>Taha</span><sup class="hero__mark">qos 2</sup></span>
+      </h1>
+      <div class="hero__foot">
+        <p class="hero__tag">Engineer of things that <em>talk to each other</em> in real time.</p>
+        <ul class="hero__facts">
+          <li><span>role</span>Senior Software Engineer</li>
+          <li><span>stack</span>Flutter &amp; .NET on AWS</li>
+          <li><span>base</span>Cairo, EG · 30.04°N 31.23°E</li>
+          <li><span>status</span><b class="blink">●</b> open to good problems</li>
+        </ul>
+      </div>
+      <div class="ticker" aria-hidden="true"><div class="ticker__track" data-ticker></div></div>
+      <p class="hero__hint" aria-hidden="true">move · click to publish · scroll to subscribe</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" data-topic="salah/about">
+      <header class="label"><span>01</span><span>salah/about</span><span>retained</span></header>
+      <p class="about__text" data-words>
+        I build software that has to answer <em>right now</em>: point-of-sale terminals talking to the cloud, kitchens that see an order the instant it is placed, doctors and patients on the same encrypted call. Six years of Flutter on the front, distributed .NET on AWS behind it, and one MQTT broker written in pure Dart because the ecosystem was missing one.
+      </p>
+      <div class="stats">
+        <div class="stat"><b data-count="6">0</b><span>years shipping<br />production software</span></div>
+        <div class="stat"><b data-count="10" data-suffix="+">0</b><span>client apps owned<br />architecture to store</span></div>
+        <div class="stat"><b data-count="200" data-suffix="+">0</b><span>students taught<br />Flutter &amp; Dart</span></div>
+        <div class="stat"><b data-count="7" data-prefix="#">0</b><span>in MENA, Google<br />Solution Challenge ’21</span></div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section class="work" id="work" data-topic="salah/work">
+      <header class="label"><span>02</span><span>salah/work/#</span><span>3 messages</span></header>
+      <h2 class="display">Topic <em>tree</em></h2>
+
+      <article class="row is-open">
+        <button class="row__head" type="button" aria-expanded="true" data-cursor="toggle">
+          <span class="row__idx">/posbank</span>
+          <span class="row__co">POSBANK ME</span>
+          <span class="row__when">2022 — now</span>
+          <i class="row__plus"></i>
+        </button>
+        <div class="row__body"><div class="row__inner">
+          <p class="row__role">Senior Software Engineer <span>· Cairo, hybrid · promoted Sep 2023</span></p>
+          <ul>
+            <li>Led end-to-end development of <b>POPs Management</b>, a Flutter app running multi-branch restaurant operations with real-time reporting and inventory.</li>
+            <li>Architected a <b>distributed WebSocket service</b> on .NET and AWS between POS terminals and the cloud. It replaced polling, and took cost and latency down with it.</li>
+            <li>Designed backend pipelines with microservices, CQRS and event sourcing, cutting end-to-end processing time and leaving headroom for peak load.</li>
+            <li>Added monitoring, alerting and self-recovery tooling; shipped REST and GraphQL APIs used across restaurant chains.</li>
+          </ul>
+          <p class="row__tech">Flutter · Dart · Bloc · .NET 8 · C# · AWS · PostgreSQL · Redis · Docker · GraphQL · WebSocket · CQRS</p>
+        </div></div>
+      </article>
+
+      <article class="row">
+        <button class="row__head" type="button" aria-expanded="false" data-cursor="toggle">
+          <span class="row__idx">/jabalsoft</span>
+          <span class="row__co">Jabal Soft</span>
+          <span class="row__when">2020 — 2022</span>
+          <i class="row__plus"></i>
+        </button>
+        <div class="row__body"><div class="row__inner">
+          <p class="row__role">Software Engineer <span>· remote · freelancer → intern → full-time</span></p>
+          <ul>
+            <li>Owned architecture and product design for <b>10+ client applications</b> in Flutter, backed by .NET Core and Node.js.</li>
+            <li>Shipped e-commerce, healthcare, real-estate and media apps to Google Play and the App Store.</li>
+            <li>Cloud architectures that cut infrastructure cost <b>35%</b> while absorbing 10× user growth; API performance up <b>70%</b> through caching, CDN and query work.</li>
+            <li>Offline-first apps with sync and retry policies; Docker-based CI/CD that cut deployment time 60%.</li>
+          </ul>
+          <p class="row__tech">Flutter · Dart · .NET Core · Node.js · React · MongoDB · MS SQL · Redis · Firebase · Docker</p>
+        </div></div>
+      </article>
+
+      <article class="row">
+        <button class="row__head" type="button" aria-expanded="false" data-cursor="toggle">
+          <span class="row__idx">/teaching</span>
+          <span class="row__co">Canadian Intl. College</span>
+          <span class="row__when">2020 — 2022</span>
+          <i class="row__plus"></i>
+        </button>
+        <div class="row__body"><div class="row__inner">
+          <p class="row__role">Instructor / Teaching Assistant <span>· Cairo, part-time</span></p>
+          <ul>
+            <li>Taught two full-credit Mobile App Development courses and trained <b>200+ students</b> in state management, UI practice and real projects.</li>
+            <li>Designed the curriculum around scalability patterns, networking and performance. 78% course retention.</li>
+            <li>Before that: Flutter instructor at the Google Developer Student Club, Helwan University.</li>
+          </ul>
+          <p class="row__tech">Flutter · Dart · curriculum design · mentoring</p>
+        </div></div>
+      </article>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects" data-topic="salah/projects">
+      <div class="projects__pin">
+        <header class="label"><span>03</span><span>salah/projects/+</span><span>drag · scroll →</span></header>
+        <div class="projects__track">
+          <div class="card card--title">
+            <h2 class="display">Selected<br /><em>payloads</em></h2>
+            <p>Five things I built that are out in the world, carrying real traffic.</p>
+          </div>
+
+          <article class="card" data-art="pos">
+            <div class="card__art"></div>
+            <div class="card__meta"><span>01</span><span>POSBANK · 2022—now</span></div>
+            <h3>POPs Enterprise &amp; Management</h3>
+            <p>Cloud POS and multi-branch restaurant suite. Real-time ordering, inventory, sales and reporting from any connected device.</p>
+            <p class="card__tags">Flutter · .NET · AWS · PostgreSQL · Redis</p>
+            <p class="card__links"><a href="https://apps.apple.com/us/app/pops-enterprise/id6448128426" target="_blank" rel="noopener" data-cursor="open">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.posbankbh.popsenterprise.cloud" target="_blank" rel="noopener" data-cursor="open">Google Play ↗</a></p>
+          </article>
+
+          <article class="card" data-art="mqtt">
+            <div class="card__art"></div>
+            <div class="card__meta"><span>02</span><span>open source · pub.dev</span></div>
+            <h3>dart_mqtt_server</h3>
+            <p>A pure-Dart, embeddable MQTT 3.1.1 broker. Every QoS level, session persistence, auth and TLS, for edge, testing and self-contained IoT.</p>
+            <p class="card__tags">Dart · MQTT 3.1.1 · TLS</p>
+            <p class="card__links"><a href="https://pub.dev/packages/mqtt_server" target="_blank" rel="noopener" data-cursor="open">pub.dev ↗</a><a href="https://github.com/salah-taha/dart_mqtt_server" target="_blank" rel="noopener" data-cursor="open">GitHub ↗</a></p>
+          </article>
+
+          <article class="card" data-art="learn">
+            <div class="card__art"></div>
+            <div class="card__meta"><span>03</span><span>Top 10 MENA · Google Solution Challenge</span></div>
+            <h3>Pharmaline</h3>
+            <p>E-learning platform with course uploads and live sessions, used by 10K+ learners. Flutter app, Node.js API with a recommendation engine, React admin.</p>
+            <p class="card__tags">Flutter · Node.js · React · MongoDB · Agora</p>
+            <p class="card__links"><a href="https://apps.apple.com/eg/app/pharma-line/id1585895991" target="_blank" rel="noopener" data-cursor="open">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.elearning.pharmaLine" target="_blank" rel="noopener" data-cursor="open">Google Play ↗</a></p>
+          </article>
+
+          <article class="card" data-art="med">
+            <div class="card__art"></div>
+            <div class="card__meta"><span>04</span><span>Jabal Medical</span></div>
+            <h3>Real-time Medical Comms</h3>
+            <p>Patient–provider messaging and video with end-to-end encryption, records and scheduling. Signalling latency under 100 ms.</p>
+            <p class="card__tags">Flutter · .NET · WebRTC · SignalR</p>
+          </article>
+
+          <article class="card" data-art="apps">
+            <div class="card__art"></div>
+            <div class="card__meta"><span>05</span><span>Jabal Soft · freelance</span></div>
+            <h3>Jabal Store, Omran, Asima, Ektsadiat</h3>
+            <p>An e-commerce app, a real-estate portfolio manager, a social network for the Arab diaspora, and the digital edition of a magazine founded in 2003.</p>
+            <p class="card__tags">Flutter · .NET · Firebase</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="stack" data-topic="salah/stack" aria-label="Skills">
+      <div class="mq" data-dir="1"><div class="mq__track">Flutter <i>✳</i> Dart <i>✳</i> Bloc <i>✳</i> Kotlin <i>✳</i> platform channels <i>✳</i> offline-first <i>✳</i> </div></div>
+      <div class="mq mq--serif" data-dir="-1"><div class="mq__track">.NET 8 <i>→</i> C# <i>→</i> ASP.NET Core <i>→</i> SignalR <i>→</i> gRPC <i>→</i> Node.js <i>→</i> GraphQL <i>→</i> </div></div>
+      <div class="mq mq--out" data-dir="1"><div class="mq__track">CQRS <i>●</i> event sourcing <i>●</i> microservices <i>●</i> MQTT <i>●</i> WebSocket <i>●</i> DDD <i>●</i> </div></div>
+      <div class="mq mq--mono" data-dir="-1"><div class="mq__track">AWS / Lambda / EC2 / S3 / Docker / CI·CD / PostgreSQL / Redis / MongoDB / MS SQL / Firebase / DynamoDB / </div></div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="term" id="terminal" data-topic="salah/terminal">
+      <header class="label"><span>04</span><span>mqtt://salah</span><span>try it</span></header>
+      <div class="term__grid">
+        <div class="term__intro">
+          <h2 class="display">Don’t read.<br /><em>Subscribe.</em></h2>
+          <p>This page runs a tiny pretend broker. Pick a topic, or type like you mean it: <code>sub salah/#</code>, <code>pub salah/inbox hello</code>, <code>help</code>.</p>
+          <div class="term__chips">
+            <button type="button" data-sub="salah/now" data-cursor="sub">salah/now</button>
+            <button type="button" data-sub="salah/awards" data-cursor="sub">salah/awards</button>
+            <button type="button" data-sub="salah/education" data-cursor="sub">salah/education</button>
+            <button type="button" data-sub="salah/principles" data-cursor="sub">salah/principles</button>
+            <button type="button" data-sub="salah/offline" data-cursor="sub">salah/offline</button>
+            <button type="button" data-sub="salah/#" data-cursor="sub">salah/#</button>
+          </div>
+        </div>
+        <div class="term__win">
+          <div class="term__title"><i></i><i></i><i></i><span>visitor@salah — mqtt</span></div>
+          <div class="term__log" data-log role="log" aria-live="polite"></div>
+          <form class="term__form" data-form autocomplete="off">
+            <label for="cmd">›</label>
+            <input id="cmd" name="cmd" type="text" spellcheck="false" placeholder="sub salah/#" aria-label="Broker command" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact" data-topic="salah/contact">
+      <header class="label"><span>05</span><span>salah/inbox</span><span>qos 2 · exactly once</span></header>
+      <p class="contact__pre">Have something that needs to work in real time?</p>
+      <a class="contact__big" href="mailto:salah.abuhemaid@gmail.com" data-magnet data-cursor="publish">
+        <span>Publish</span> <em>a message</em> <span class="contact__arrow">↗</span>
+      </a>
+      <div class="contact__grid">
+        <button class="contact__mail" type="button" data-copy="salah.abuhemaid@gmail.com" data-cursor="copy">salah.abuhemaid@gmail.com <small>click to copy</small></button>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/salah-taha/" target="_blank" rel="noopener" data-cursor="open">LinkedIn ↗</a></li>
+          <li><a href="https://github.com/salah-taha" target="_blank" rel="noopener" data-cursor="open">GitHub ↗</a></li>
+          <li><a href="https://pub.dev/packages/mqtt_server" target="_blank" rel="noopener" data-cursor="open">pub.dev ↗</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span data-year></span> Salah Taha</span>
+    <span>Arabic · English</span>
+    <span>designed &amp; built in Cairo</span>
+    <a href="#top" data-cursor="top">DISCONNECT ↑</a>
+  </footer>
+
+  <div class="hud" aria-hidden="true"><span data-hud>—</span></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
