@@ -23,6 +23,26 @@ const ART = {
       <circle class="art-x" cx="230" cy="24" r="4"><animate attributeName="opacity" values="1;.2;1" dur="1.4s" repeatCount="indefinite"/></circle>
       <text class="art-t" x="18" y="88">MULTI-BRANCH · LIVE</text>`)
   },
+  // desktop window: sidebar, ledger table, offline badge
+  desk() {
+    const r = rnd(11)
+    let rows = ''
+    for (let i = 0; i < 7; i++) {
+      const y = 62 + i * 13
+      rows += `<rect class="art-f" x="78" y="${y}" width="${30 + r() * 40}" height="2.5" opacity=".8"/><rect class="art-f" x="168" y="${y}" width="${10 + r() * 14}" height="2.5"/><rect class="${i === 2 ? 'art-x' : 'art-f'}" x="206" y="${y}" width="${10 + r() * 14}" height="2.5"/><path class="art-s" d="M72 ${y + 8} H236" opacity=".3"/>`
+    }
+    let side = ''
+    for (let i = 0; i < 6; i++) side += `<rect class="${i === 1 ? 'art-x' : 'art-f'}" x="22" y="${48 + i * 14}" width="${i === 1 ? 38 : 24 + r() * 14}" height="${i === 1 ? 8 : 3}" opacity="${i === 1 ? 1 : 0.6}"/>`
+    return svg(`
+      <rect class="art-s" x="12" y="14" width="230" height="142" rx="4"/>
+      <path class="art-s" d="M12 32 H242 M66 32 V156"/>
+      <circle class="art-s" cx="22" cy="23" r="2.5"/><circle class="art-s" cx="31" cy="23" r="2.5"/><circle class="art-s" cx="40" cy="23" r="2.5"/>
+      <text class="art-t" x="78" y="26">MOTORYA — LEDGER</text>
+      ${side}
+      <text class="art-t" x="78" y="50">ACCOUNT</text><text class="art-t" x="168" y="50">IN</text><text class="art-t" x="206" y="50">OUT</text>
+      ${rows}
+      <g style="animation:float 3.5s ease-in-out infinite"><rect class="art-x" x="176" y="134" width="60" height="15"/><text class="art-t" x="181" y="144.5" style="fill:#0e0e0c">OFFLINE ✓</text></g>`)
+  },
   // packet header bytes + expanding rings
   mqtt() {
     const bytes = ['10', '0C', '00', '04', '4D', '51', '54', '54', '04', '02', '00', '3C']
@@ -69,6 +89,6 @@ const ART = {
 export function initArt() {
   document.querySelectorAll('[data-art]').forEach((card) => {
     const make = ART[card.dataset.art]
-    if (make) card.querySelector('.card__art').innerHTML = make()
+    if (make) card.innerHTML = make()
   })
 }

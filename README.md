@@ -20,5 +20,5 @@ connected to this repo: every push to `main` runs `npm run build` and `npx wrang
 ## Editing content
 
 - Copy, experience, projects: `index.html`
-- Hero network node names: `src/net.js`
+- Hero constellation (the shipped products): `src/net.js`
 - Project card artwork: `src/art.js`
