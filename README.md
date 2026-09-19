@@ -1,10 +1,9 @@
 # salah-taha-site
 
-Personal site of Salah Taha. The concept: the portfolio is an MQTT broker. Visitors connect
-(handshake preloader), packets route through a live network in the hero, work history is a
-topic tree, and there is a small pretend MQTT client to subscribe to `salah/#`.
+Personal site of Salah Taha, live at https://salah-taha.com.
 
-Vanilla JS + Vite, GSAP/ScrollTrigger, Lenis. No framework, no images.
+Vanilla JS + Vite with GSAP for light motion. No framework, no images: the hero network
+and project artwork are drawn in canvas / SVG.
 
 ```bash
 npm install
@@ -21,6 +20,5 @@ connected to this repo: every push to `main` runs `npm run build` and `npx wrang
 ## Editing content
 
 - Copy, experience, projects: `index.html`
-- Terminal topics: `src/terminal.js`
 - Hero network node names: `src/net.js`
 - Project card artwork: `src/art.js`
