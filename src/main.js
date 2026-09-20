@@ -147,8 +147,9 @@ if (!reduced) {
       cards.forEach((card, i) => {
         const next = cards[i + 1]
         if (!next) return
-        gsap.to(card, {
-          scale: 0.94, filter: 'brightness(0.8)', ease: 'none',
+        // explicit start: GSAP reads the unset filter ("none") as brightness(0), i.e. black
+        gsap.fromTo(card, { scale: 1, filter: 'brightness(1)' }, {
+          scale: 0.94, filter: 'brightness(0.35)', ease: 'none',
           scrollTrigger: { trigger: next, start: 'top 55%', end: 'top 120px', scrub: true },
         })
       })
