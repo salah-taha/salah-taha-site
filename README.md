@@ -2,8 +2,9 @@
 
 Personal site of Salah Taha, live at https://salah-taha.com.
 
-Vanilla JS + Vite with GSAP for light motion. No framework, no images: the hero network
-and project artwork are drawn in canvas / SVG.
+Vanilla JS + Vite with GSAP for light motion. No framework. The background grid is a
+canvas, the project artwork is generated SVG, and the hero terminal and the Ctrl/⌘+K
+command palette are plain DOM.
 
 ```bash
 npm install
@@ -20,5 +21,7 @@ connected to this repo: every push to `main` runs `npm run build` and `npx wrang
 ## Editing content
 
 - Copy, experience, projects: `index.html`
-- Hero constellation (the shipped products): `src/net.js`
+- Hero terminal commands and output: `src/term.js`
+- Command palette entries: `src/main.js` (the `initPalette` call)
+- Background grid and packets: `src/field.js`
 - Project card artwork: `src/art.js`

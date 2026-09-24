@@ -1,6 +1,6 @@
 // Small generative SVG motifs for the project cards. viewBox is 250 x 170.
 
-const svg = (body) => `<svg viewBox="0 0 250 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${body}</svg>`
+const svg = (body) => `<svg viewBox="0 0 250 170" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${body}</svg>`
 const rnd = (seed) => () => ((seed = (seed * 16807) % 2147483647) / 2147483647)
 
 const ART = {

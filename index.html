@@ -4,123 +4,146 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Salah Taha — Software Engineer</title>
-  <meta name="description" content="Salah Taha is a software engineer in Cairo who ships complete products: mobile apps, real-time backends, offline-first desktop software and open-source tools." />
+  <meta name="description" content="Salah Taha is a senior software engineer in Cairo who ships complete products: mobile apps, real-time backends, offline-first desktop software and open-source tools." />
   <meta property="og:title" content="Salah Taha — Software Engineer" />
   <meta property="og:description" content="Mobile apps, real-time backends, offline-first desktop software and open-source tools. Shipped end to end." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://salah-taha.com" />
   <link rel="canonical" href="https://salah-taha.com" />
-  <meta name="theme-color" content="#ebe6dc" />
+  <meta name="theme-color" content="#09090b" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
   <script>
     try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t } catch (e) {}
   </script>
 </head>
 <body>
-  <!-- short curtain, never blocks content for long -->
-  <div class="curtain" aria-hidden="true"><span>Salah <em>Taha</em></span></div>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="cursor" aria-hidden="true"></div>
+  <canvas class="field" aria-hidden="true"></canvas>
 
   <header class="bar">
-    <a href="#top" class="bar__id">Salah <em>Taha</em></a>
+    <a href="#top" class="bar__id" aria-label="Salah Taha, back to top"><span class="bar__prompt">~/</span>salah-taha<i class="caret"></i></a>
     <nav class="bar__nav" aria-label="Sections">
-      <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#stack">Stack</a>
       <a href="#contact">Contact</a>
     </nav>
     <div class="bar__meta">
-      <span class="bar__clock">Cairo <b data-clock>--:--</b></span>
-      <button class="theme" type="button" aria-label="Toggle colour theme"><i></i></button>
+      <button class="kbtn" type="button" data-palette aria-label="Open command palette">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+        <span>Jump to…</span><kbd data-mod>Ctrl</kbd><kbd>K</kbd>
+      </button>
+      <button class="theme" type="button" aria-label="Toggle colour theme">
+        <svg class="theme__sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>
+        <svg class="theme__moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7Z"/></svg>
+      </button>
     </div>
   </header>
 
   <!-- thumb-reach navigation on phones -->
   <nav class="dock" aria-label="Sections">
-    <a href="#top" data-spy="top">Hi</a>
+    <a href="#top" data-spy="top">Home</a>
     <a href="#work" data-spy="work">Work</a>
     <a href="#experience" data-spy="experience">Path</a>
     <a href="#stack" data-spy="stack">Stack</a>
-    <a href="#contact" data-spy="contact" class="dock__cta">Talk</a>
+    <button type="button" class="dock__k" data-palette aria-label="Open command palette">⌘</button>
   </nav>
 
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <canvas class="hero__net" aria-hidden="true"></canvas>
-      <p class="hero__hint" aria-hidden="true">these are things I shipped · tap one</p>
-      <div class="hero__body">
-        <h1 class="hero__name" aria-label="Salah Taha">
-          <span class="hero__line" data-letters>SALAH</span>
-          <span class="hero__line hero__line--2" data-letters>Taha</span>
+      <div class="hero__copy">
+        <p class="pill"><span class="dot"></span>Senior Software Engineer · POSBANK · Cairo</p>
+        <h1 class="hero__title">
+          <span class="hero__name">Salah Taha</span>
+          <span class="hero__line">I ship products</span>
+          <span class="hero__line">that <em>keep running.</em></span>
         </h1>
-        <div class="hero__row">
-          <p class="hero__tag">Software engineer. I ship
-            <span class="swap" aria-live="off"><span class="swap__in" data-swap>mobile apps</span></span>
-            <span class="sr">mobile apps, real-time backends, offline-first desktop software and open-source tools</span>
-            end to end.
-          </p>
-          <div class="hero__side">
-            <p class="uptime"><span>shipping software for</span><b data-uptime>6y 0m 0d 00:00:00</b></p>
-            <div class="hero__cta">
-              <a class="btn btn--solid" href="mailto:contact@salah-taha.com" data-magnet>Get in touch</a>
-              <a class="btn" href="#work">See the work ↓</a>
-            </div>
-          </div>
+        <p class="hero__sub">Six years taking <b>mobile apps</b>, <b>real-time backends</b> and <b>offline-first software</b> from an empty repo to production, and keeping them up once they're there.</p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="mailto:contact@salah-taha.com">Get in touch <span aria-hidden="true">→</span></a>
+          <a class="btn" href="#work">See the work</a>
         </div>
       </div>
+
+      <div class="term" data-term>
+        <div class="term__bar">
+          <i></i><i></i><i></i>
+          <span>salah@cairo: ~</span>
+          <small data-clock>--:--</small>
+        </div>
+        <div class="term__body" data-term-body aria-live="polite">
+          <noscript><p>$ whoami<br />Salah Taha, senior software engineer.</p></noscript>
+        </div>
+        <form class="term__in" data-term-form autocomplete="off">
+          <label class="sr" for="term-input">Terminal command</label>
+          <span class="term__ps">$</span>
+          <input id="term-input" name="cmd" type="text" spellcheck="false" autocapitalize="off" enterkeyhint="send" placeholder="type help, or tap a command" />
+        </form>
+        <div class="term__chips" data-term-chips>
+          <button type="button" data-cmd="projects">projects</button>
+          <button type="button" data-cmd="stack">stack</button>
+          <button type="button" data-cmd="uptime">uptime</button>
+          <button type="button" data-cmd="contact">contact</button>
+          <button type="button" data-cmd="sudo hire salah">sudo hire salah</button>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#stats" aria-label="Scroll down"><span></span></a>
     </section>
 
-    <div class="band" aria-hidden="true">
-      <div class="mq" data-dir="1"><div class="mq__track">Mobile <i>✳</i> Backend <i>✳</i> <em>Real-time</em> <i>✳</i> Desktop <i>✳</i> Offline-first <i>✳</i> <em>Open source</em> <i>✳</i> </div></div>
-    </div>
+    <!-- STATS -->
+    <section class="stats" id="stats" aria-label="In numbers">
+      <div class="stat"><b data-count="6" data-suffix="+">6+</b><span>years shipping production software</span></div>
+      <div class="stat"><b data-count="15" data-suffix="+">15+</b><span>products taken to store or production</span></div>
+      <div class="stat"><b data-count="200" data-suffix="+">200+</b><span>students taught to build apps</span></div>
+      <div class="stat"><b data-count="7" data-prefix="#">#7</b><span>in MENA, Google Solution Challenge</span></div>
+    </section>
 
     <!-- ABOUT -->
     <section class="sec about" id="about">
-      <header class="label"><span>01</span><h2>About</h2></header>
-      <p class="about__text" data-lines>
-        I take products from an empty repo to people’s hands. A <em>fitness app</em> with its own backend, a <em>point-of-sale</em> platform running restaurant chains, an <em>accounting system</em> that works with no internet, an <em>MQTT broker</em> the Dart ecosystem was missing.
+      <header class="label"><span>01</span><h2>About</h2><i></i></header>
+      <p class="about__text">
+        I take products from an empty repo to people's hands. A <em>fitness app</em> with its own backend, a <em>point-of-sale</em> platform running restaurant chains, an <em>accounting system</em> that works with no internet, an <em>MQTT broker</em> the Dart ecosystem was missing.
       </p>
-      <div class="about__cols">
-        <p>Six years in, the stack has never been the point. I have shipped Flutter, .NET, NestJS, Node.js and React in production, and I pick whatever gets a reliable product out the door. What stays constant is the hard part I like: real-time communication, offline-first sync, and systems that keep running when nobody is watching.</p>
-        <p>Currently Senior Software Engineer at POSBANK in Cairo. Before that I owned architecture for 10+ client apps at Jabal Soft and taught mobile development to 200+ university students. Google Solution Challenge Top 10 in MENA, 2021.</p>
-      </div>
-      <div class="stats">
-        <div class="stat"><b data-count="6">6</b><span>years shipping production software</span></div>
-        <div class="stat"><b data-count="15" data-suffix="+">15+</b><span>products taken to store or production</span></div>
-        <div class="stat"><b data-count="200" data-suffix="+">200+</b><span>students taught to build apps</span></div>
-        <div class="stat"><b data-count="7" data-prefix="#">#7</b><span>in MENA, Google Solution Challenge</span></div>
+      <div class="about__grid">
+        <p>Six years in, the stack has never been the point. I have shipped Flutter, .NET, NestJS, Node.js and React in production, and I pick whatever gets a reliable product out the door. What stays constant is the hard part I like: <b>real-time communication</b>, <b>offline-first sync</b>, and systems that keep running when nobody is watching.</p>
+        <p>Before POSBANK I owned architecture for 10+ client apps at Jabal Soft and taught mobile development to 200+ university students. Google Solution Challenge Top 10 in MENA, 2021.</p>
+        <aside class="focus">
+          <p class="focus__h">// what I'm good at</p>
+          <ul>
+            <li><span>01</span>Real-time systems: WebSocket, MQTT, WebRTC</li>
+            <li><span>02</span>Offline-first apps that sync when they can</li>
+            <li><span>03</span>Owning a product from schema to store listing</li>
+            <li><span>04</span>Architecture that survives 10× growth</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
     <!-- WORK -->
-    <section class="work" id="work">
-      <div class="work__head">
-        <header class="label"><span>02</span><h2>Selected work</h2></header>
-        <p class="work__lede">Seven things that are out in the world. <em>Different stacks, same job:</em> make it work, make it last.</p>
-      </div>
+    <section class="sec work" id="work">
+      <header class="label"><span>02</span><h2>Selected work</h2><i></i></header>
+      <p class="lede">Seven things that are out in the world. <em>Different stacks, same job:</em> make it work, make it last.</p>
 
-      <div class="projs">
-        <article class="proj proj--feature" id="p-batal" style="--i:0">
-          <div class="proj__info">
-            <p class="proj__meta"><span>01</span> Mobile · Backend · Web</p>
+      <div class="bento">
+        <article class="card card--feature" id="p-batal">
+          <div class="card__info">
+            <p class="card__meta"><span>01</span>Mobile · Backend · Web</p>
             <h3>Batal <em lang="ar" dir="rtl">بطل</em></h3>
-            <p class="proj__one">A fitness app that plays like a game. Every workout earns XP and levels you up.</p>
-            <ul class="proj__pts">
+            <p class="card__one">A fitness app that plays like a game. Every workout earns XP and levels you up.</p>
+            <ul class="card__pts">
               <li>839 video exercises, nutrition tracked to the gram, challenges and achievements.</li>
               <li>Gyms attach to their members by QR, and run the front desk, billing and coaching from a web dashboard.</li>
               <li>Arabic and English, and it keeps working with no connection.</li>
             </ul>
             <p class="chips"><span>Flutter</span><span>NestJS</span><span>PostgreSQL</span><span>Prisma</span><span>Socket.IO</span><span>React</span><span>Docker</span><span>AWS</span></p>
-            <p class="proj__links"><a href="https://batalfit.com" target="_blank" rel="noopener" data-cursor>batalfit.com ↗</a><a href="https://play.google.com/store/apps/details?id=com.batalfit.app" target="_blank" rel="noopener" data-cursor>Google Play ↗</a></p>
+            <p class="card__links"><a href="https://batalfit.com" target="_blank" rel="noopener">batalfit.com ↗</a><a href="https://play.google.com/store/apps/details?id=com.batalfit.app" target="_blank" rel="noopener">Google Play ↗</a></p>
           </div>
-          <div class="proj__vis proj__vis--phones">
-            <div class="browser"><img src="/img/batal-web.webp" width="1300" height="813" alt="Batal gym dashboard on the web" loading="lazy" /></div>
+          <div class="card__vis card__vis--phones">
+            <div class="browser"><div class="browser__bar"><i></i><i></i><i></i><span>dashboard.batalfit.com</span></div><img src="/img/batal-web.webp" width="1300" height="813" alt="Batal gym dashboard on the web" loading="lazy" /></div>
             <div class="phones">
               <div class="phone phone--l"><img src="/img/batal-1.webp" width="520" height="1125" alt="Batal live workout screen" loading="lazy" /></div>
               <div class="phone phone--c"><img src="/img/batal-2.webp" width="520" height="1125" alt="Batal home screen" loading="lazy" /></div>
@@ -129,209 +152,221 @@
           </div>
         </article>
 
-        <article class="proj" id="p-pops" style="--i:1">
-          <div class="proj__info">
-            <p class="proj__meta"><span>02</span> Mobile · Backend · Cloud</p>
+        <article class="card card--wide" id="p-pops">
+          <div class="card__vis" data-art="pos"></div>
+          <div class="card__info">
+            <p class="card__meta"><span>02</span>Mobile · Backend · Cloud</p>
             <h3>POPs Enterprise &amp; Management</h3>
-            <p class="proj__one">Cloud point-of-sale and multi-branch restaurant management, at POSBANK.</p>
-            <ul class="proj__pts">
+            <p class="card__one">Cloud point-of-sale and multi-branch restaurant management, at POSBANK.</p>
+            <ul class="card__pts">
               <li>Led the management app end to end: real-time reporting, inventory, sales.</li>
               <li>Architected the distributed WebSocket layer between POS terminals and the cloud, replacing polling.</li>
               <li>CQRS and event-sourced pipelines with monitoring and self-recovery.</li>
             </ul>
             <p class="chips"><span>Flutter</span><span>.NET 8</span><span>AWS</span><span>PostgreSQL</span><span>Redis</span><span>GraphQL</span><span>WebSocket</span></p>
-            <p class="proj__links"><a href="https://apps.apple.com/us/app/pops-enterprise/id6448128426" target="_blank" rel="noopener" data-cursor>App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.posbankbh.popsenterprise.cloud" target="_blank" rel="noopener" data-cursor>Google Play ↗</a></p>
+            <p class="card__links"><a href="https://apps.apple.com/us/app/pops-enterprise/id6448128426" target="_blank" rel="noopener">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.posbankbh.popsenterprise.cloud" target="_blank" rel="noopener">Google Play ↗</a></p>
           </div>
-          <div class="proj__vis" data-art="pos"></div>
         </article>
 
-        <article class="proj" id="p-motorya" style="--i:2">
-          <div class="proj__info">
-            <p class="proj__meta"><span>03</span> Desktop · Android</p>
+        <article class="card" id="p-motorya">
+          <div class="card__vis" data-art="desk"></div>
+          <div class="card__info">
+            <p class="card__meta"><span>03</span>Desktop · Android</p>
             <h3>Motorya</h3>
-            <p class="proj__one">Offline-first management software for car showrooms, on Windows and Android.</p>
-            <ul class="proj__pts">
+            <p class="card__one">Offline-first management software for car showrooms, on Windows and Android.</p>
+            <ul class="card__pts">
               <li>Car intake, inventory, sales and invoicing in one Arabic-first app.</li>
-              <li>A full double-entry ledger: investors and owners, custody, recurring obligations, zakat.</li>
-              <li>Runs entirely on a local database, with printable reports and no dependency on a connection.</li>
+              <li>A full double-entry ledger: investors, custody, recurring obligations, zakat.</li>
+              <li>Runs entirely on a local database, with printable reports.</li>
             </ul>
-            <p class="chips"><span>Flutter desktop</span><span>Dart</span><span>Drift / SQLite</span><span>Bloc</span><span>PDF &amp; printing</span><span>Cloudflare Workers</span></p>
+            <p class="chips"><span>Flutter desktop</span><span>Drift / SQLite</span><span>Bloc</span><span>PDF</span><span>CF Workers</span></p>
           </div>
-          <div class="proj__vis" data-art="desk"></div>
         </article>
 
-        <article class="proj" id="p-mqtt" style="--i:3">
-          <div class="proj__info">
-            <p class="proj__meta"><span>04</span> Open source</p>
+        <article class="card" id="p-mqtt">
+          <div class="card__vis" data-art="mqtt"></div>
+          <div class="card__info">
+            <p class="card__meta"><span>04</span>Open source</p>
             <h3>mqtt_server</h3>
-            <p class="proj__one">A pure-Dart MQTT 3.1.1 broker you can embed in an app or run standalone.</p>
-            <ul class="proj__pts">
+            <p class="card__one">A pure-Dart MQTT 3.1.1 broker you can embed in an app or run standalone.</p>
+            <ul class="card__pts">
               <li>All QoS levels, session persistence, authentication and TLS.</li>
               <li>Built for edge devices, testing and self-contained IoT setups.</li>
             </ul>
             <p class="chips"><span>Dart</span><span>MQTT 3.1.1</span><span>TCP / TLS</span></p>
-            <p class="proj__links"><a href="https://pub.dev/packages/mqtt_server" target="_blank" rel="noopener" data-cursor>pub.dev ↗</a><a href="https://github.com/salah-taha/dart_mqtt_server" target="_blank" rel="noopener" data-cursor>GitHub ↗</a></p>
+            <p class="card__links"><a href="https://pub.dev/packages/mqtt_server" target="_blank" rel="noopener">pub.dev ↗</a><a href="https://github.com/salah-taha/dart_mqtt_server" target="_blank" rel="noopener">GitHub ↗</a></p>
           </div>
-          <div class="proj__vis" data-art="mqtt"></div>
         </article>
 
-        <article class="proj" id="p-pharmaline" style="--i:4">
-          <div class="proj__info">
-            <p class="proj__meta"><span>05</span> Mobile · Backend · Web</p>
+        <article class="card card--wide" id="p-pharmaline">
+          <div class="card__vis" data-art="learn"></div>
+          <div class="card__info">
+            <p class="card__meta"><span>05</span>Mobile · Backend · Web</p>
             <h3>Pharmaline</h3>
-            <p class="proj__one">E-learning with course uploads and live sessions, used by 10K+ learners.</p>
-            <ul class="proj__pts">
+            <p class="card__one">E-learning with course uploads and live sessions, used by 10K+ learners.</p>
+            <ul class="card__pts">
               <li>Top 10 in MENA at the Google Solution Challenge 2021.</li>
               <li>Built the app, the API with a recommendation engine, and the admin panel.</li>
             </ul>
             <p class="chips"><span>Flutter</span><span>Node.js</span><span>React</span><span>MongoDB</span><span>Agora</span></p>
-            <p class="proj__links"><a href="https://apps.apple.com/eg/app/pharma-line/id1585895991" target="_blank" rel="noopener" data-cursor>App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.elearning.pharmaLine" target="_blank" rel="noopener" data-cursor>Google Play ↗</a></p>
+            <p class="card__links"><a href="https://apps.apple.com/eg/app/pharma-line/id1585895991" target="_blank" rel="noopener">App Store ↗</a><a href="https://play.google.com/store/apps/details?id=com.elearning.pharmaLine" target="_blank" rel="noopener">Google Play ↗</a></p>
           </div>
-          <div class="proj__vis" data-art="learn"></div>
         </article>
 
-        <article class="proj" id="p-medical" style="--i:5">
-          <div class="proj__info">
-            <p class="proj__meta"><span>06</span> Mobile · Real-time</p>
+        <article class="card card--half" id="p-medical">
+          <div class="card__vis" data-art="med"></div>
+          <div class="card__info">
+            <p class="card__meta"><span>06</span>Mobile · Real-time</p>
             <h3>Medical Comms</h3>
-            <p class="proj__one">Patient–provider messaging and video, encrypted end to end.</p>
-            <ul class="proj__pts">
+            <p class="card__one">Patient–provider messaging and video, encrypted end to end.</p>
+            <ul class="card__pts">
               <li>Medical records and appointment scheduling alongside the calls.</li>
               <li>Signalling latency under 100 ms.</li>
             </ul>
             <p class="chips"><span>Flutter</span><span>.NET</span><span>WebRTC</span><span>SignalR</span></p>
           </div>
-          <div class="proj__vis" data-art="med"></div>
         </article>
 
-        <article class="proj" id="p-clients" style="--i:6">
-          <div class="proj__info">
-            <p class="proj__meta"><span>07</span> Client work</p>
+        <article class="card card--half" id="p-clients">
+          <div class="card__vis" data-art="apps"></div>
+          <div class="card__info">
+            <p class="card__meta"><span>07</span>Client work</p>
             <h3>Jabal Store, Omran, Asima, Ektsadiat</h3>
-            <p class="proj__one">Four of the 10+ client apps I owned at Jabal Soft, from architecture to the stores.</p>
-            <ul class="proj__pts">
+            <p class="card__one">Four of the 10+ client apps I owned at Jabal Soft, from architecture to the stores.</p>
+            <ul class="card__pts">
               <li>An e-commerce app, a real-estate portfolio manager, a social network for the Arab diaspora, and the digital edition of a magazine founded in 2003.</li>
             </ul>
             <p class="chips"><span>Flutter</span><span>.NET Core</span><span>Node.js</span><span>Firebase</span></p>
           </div>
-          <div class="proj__vis" data-art="apps"></div>
         </article>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- EXPERIENCE: read like a git log -->
     <section class="sec" id="experience">
-      <header class="label"><span>03</span><h2>Experience</h2></header>
-      <div class="timeline">
-        <div class="timeline__rail" aria-hidden="true"><i></i></div>
+      <header class="label"><span>03</span><h2>Experience</h2><i></i></header>
+      <p class="lede"><code>git log --career</code> <em>newest first.</em></p>
 
-        <article class="job">
-          <p class="job__year">2022<small>— now</small></p>
-          <div class="job__main">
-            <h3>POSBANK ME</h3>
-            <p class="job__role">Senior Software Engineer <span>· Cairo, hybrid · promoted Sep 2023</span></p>
-            <ul>
-              <li>Led end-to-end development of <b>POPs Management</b>, the app running multi-branch restaurant operations with real-time reporting and inventory.</li>
-              <li>Architected a <b>distributed WebSocket service</b> between POS terminals and the cloud. It replaced polling and took cost and latency down with it.</li>
-              <li>Designed backend pipelines with microservices, CQRS and event sourcing; added monitoring, alerting and self-recovery.</li>
-              <li>Shipped REST and GraphQL APIs used across restaurant chains.</li>
-            </ul>
-          </div>
+      <div class="log">
+        <div class="log__rail" aria-hidden="true"><i></i></div>
+
+        <article class="commit is-head">
+          <p class="commit__hash"><span>c0ffee1</span><b>HEAD → main</b><time>2022 — now</time></p>
+          <h3>POSBANK ME</h3>
+          <p class="commit__role">Senior Software Engineer <span>Cairo, hybrid · promoted Sep 2023</span></p>
+          <ul>
+            <li>Led end-to-end development of <b>POPs Management</b>, the app running multi-branch restaurant operations with real-time reporting and inventory.</li>
+            <li>Architected a <b>distributed WebSocket service</b> between POS terminals and the cloud. It replaced polling and took cost and latency down with it.</li>
+            <li>Designed backend pipelines with microservices, CQRS and event sourcing; added monitoring, alerting and self-recovery.</li>
+            <li>Shipped REST and GraphQL APIs used across restaurant chains.</li>
+          </ul>
         </article>
 
-        <article class="job">
-          <p class="job__year">2020<small>— 2022</small></p>
-          <div class="job__main">
-            <h3>Jabal Soft</h3>
-            <p class="job__role">Software Engineer <span>· remote · freelancer → intern → full-time</span></p>
-            <ul>
-              <li>Owned architecture and product design for <b>10+ client applications</b>: e-commerce, healthcare, real estate, media.</li>
-              <li>Cloud architectures that cut infrastructure cost <b>35%</b> while absorbing 10× user growth; API performance up <b>70%</b>.</li>
-              <li>Offline-first apps with sync and retry policies; Docker-based CI/CD that cut deployment time 60%.</li>
-            </ul>
-          </div>
+        <article class="commit">
+          <p class="commit__hash"><span>7a3d9e2</span><time>2020 — 2022</time></p>
+          <h3>Jabal Soft</h3>
+          <p class="commit__role">Software Engineer <span>remote · freelancer → intern → full-time</span></p>
+          <ul>
+            <li>Owned architecture and product design for <b>10+ client applications</b>: e-commerce, healthcare, real estate, media.</li>
+            <li>Cloud architectures that cut infrastructure cost <b>35%</b> while absorbing 10× user growth; API performance up <b>70%</b>.</li>
+            <li>Offline-first apps with sync and retry policies; Docker-based CI/CD that cut deployment time <b>60%</b>.</li>
+          </ul>
         </article>
 
-        <article class="job">
-          <p class="job__year">2020<small>— 2022</small></p>
-          <div class="job__main">
-            <h3>Canadian International College</h3>
-            <p class="job__role">Instructor / Teaching Assistant <span>· Cairo, part-time</span></p>
-            <ul>
-              <li>Taught two full-credit mobile development courses to <b>200+ students</b>; designed the curriculum around scalability, networking and performance.</li>
-            </ul>
-          </div>
+        <article class="commit">
+          <p class="commit__hash"><span>4be81f0</span><time>2020 — 2022</time></p>
+          <h3>Canadian International College</h3>
+          <p class="commit__role">Instructor / Teaching Assistant <span>Cairo, part-time</span></p>
+          <ul>
+            <li>Taught two full-credit mobile development courses to <b>200+ students</b>; designed the curriculum around scalability, networking and performance.</li>
+          </ul>
         </article>
 
-        <article class="job">
-          <p class="job__year">2019<small>— 2023</small></p>
-          <div class="job__main">
-            <h3>Helwan University</h3>
-            <p class="job__role">B.Sc. Computer Science &amp; Artificial Intelligence</p>
-            <ul>
-              <li><b>Google Solution Challenge 2021:</b> Top 10 in MENA, 7th of 100+ projects. Instructor at the Google Developer Student Club.</li>
-            </ul>
-          </div>
+        <article class="commit">
+          <p class="commit__hash"><span>1f0a2b7</span><b class="tag">init</b><time>2019 — 2023</time></p>
+          <h3>Helwan University</h3>
+          <p class="commit__role">B.Sc. Computer Science &amp; Artificial Intelligence</p>
+          <ul>
+            <li><b>Google Solution Challenge 2021:</b> Top 10 in MENA, 7th of 100+ projects. Instructor at the Google Developer Student Club.</li>
+          </ul>
         </article>
       </div>
     </section>
 
     <!-- STACK -->
     <section class="sec" id="stack">
-      <header class="label"><span>04</span><h2>Stack</h2></header>
-      <p class="stack__lede">Tools I have shipped with. <em>Tap a product</em> to see what it runs on.</p>
+      <header class="label"><span>04</span><h2>Stack</h2><i></i></header>
+      <p class="lede">Tools I have shipped with. <em>Pick a product</em> to see what it runs on.</p>
       <p class="filters" role="group" aria-label="Filter stack by product">
-        <button type="button" class="is-on" data-filter="all">Everything</button>
-        <button type="button" data-filter="batal">Batal</button>
-        <button type="button" data-filter="pops">POPs</button>
-        <button type="button" data-filter="motorya">Motorya</button>
-        <button type="button" data-filter="mqtt">mqtt_server</button>
-        <button type="button" data-filter="pharma">Pharmaline</button>
+        <button type="button" class="is-on" data-filter="all" aria-pressed="true">Everything</button>
+        <button type="button" data-filter="batal" aria-pressed="false">Batal</button>
+        <button type="button" data-filter="pops" aria-pressed="false">POPs</button>
+        <button type="button" data-filter="motorya" aria-pressed="false">Motorya</button>
+        <button type="button" data-filter="mqtt" aria-pressed="false">mqtt_server</button>
+        <button type="button" data-filter="pharma" aria-pressed="false">Pharmaline</button>
       </p>
       <dl class="stack">
-        <div><dt>Apps</dt><dd>
+        <div><dt><span>/apps</span></dt><dd>
           <span data-in="batal pops motorya pharma">Flutter</span><span data-in="batal pops motorya mqtt pharma">Dart</span><span data-in="pops motorya">Bloc</span><span data-in="motorya">Flutter desktop</span><span data-in="batal pharma">React</span><span>Kotlin</span><span>Platform channels</span><span data-in="batal motorya">Offline-first sync</span>
         </dd></div>
-        <div><dt>Backend</dt><dd>
+        <div><dt><span>/backend</span></dt><dd>
           <span data-in="pops">.NET 8 / C#</span><span data-in="pops">ASP.NET Core</span><span data-in="batal">NestJS</span><span data-in="pharma">Node.js</span><span data-in="batal">TypeScript</span><span>SignalR</span><span>gRPC</span><span data-in="pops">GraphQL</span><span data-in="batal pops pharma">REST</span>
         </dd></div>
-        <div><dt>Real-time &amp; architecture</dt><dd>
+        <div><dt><span>/realtime</span></dt><dd>
           <span data-in="pops batal">WebSocket</span><span data-in="batal">Socket.IO</span><span data-in="mqtt">MQTT</span><span>WebRTC</span><span data-in="pops">CQRS</span><span data-in="pops">Event sourcing</span><span data-in="pops">Microservices</span><span>DDD</span>
         </dd></div>
-        <div><dt>Data</dt><dd>
+        <div><dt><span>/data</span></dt><dd>
           <span data-in="batal pops">PostgreSQL</span><span data-in="batal">Prisma</span><span data-in="motorya">SQLite / Drift</span><span>MS SQL Server</span><span data-in="pharma">MongoDB</span><span data-in="pops">Redis</span><span>Firebase</span><span>DynamoDB</span>
         </dd></div>
-        <div><dt>Cloud &amp; delivery</dt><dd>
+        <div><dt><span>/cloud</span></dt><dd>
           <span data-in="batal pops">AWS</span><span data-in="batal pops">Docker</span><span data-in="motorya">Cloudflare Workers</span><span>GCP</span><span data-in="batal pops">CI/CD</span><span data-in="pops">Monitoring</span>
         </dd></div>
-        <div><dt>Also fluent in</dt><dd>
+        <div><dt><span>/also</span></dt><dd>
           <span>Python</span><span>Java</span><span>C++</span><span>SQL</span><span>Bash</span><span>Arabic</span><span>English</span>
         </dd></div>
       </dl>
     </section>
 
     <!-- CONTACT -->
-    <section class="contact" id="contact">
-      <div class="contact__in">
-        <header class="label"><span>05</span><h2>Contact</h2></header>
-        <p class="contact__pre">Have a product that needs to exist?</p>
-        <a class="contact__big" href="mailto:contact@salah-taha.com" data-cursor>Let’s <em>talk</em> <span class="contact__arrow">↗</span></a>
-        <div class="contact__grid">
-          <button class="contact__mail" type="button" data-copy="contact@salah-taha.com" data-cursor>contact@salah-taha.com <small>tap to copy</small></button>
-          <ul>
-            <li><a href="https://www.linkedin.com/in/salah-taha/" target="_blank" rel="noopener" data-cursor>LinkedIn ↗</a></li>
-            <li><a href="https://github.com/salah-taha" target="_blank" rel="noopener" data-cursor>GitHub ↗</a></li>
-            <li><a href="https://pub.dev/packages/mqtt_server" target="_blank" rel="noopener" data-cursor>pub.dev ↗</a></li>
+    <section class="sec contact" id="contact">
+      <div class="contact__box">
+        <p class="contact__pre">// have a product that needs to exist?</p>
+        <a class="contact__big" href="mailto:contact@salah-taha.com">Let's build <em>something</em> <span class="contact__arrow" aria-hidden="true">↗</span></a>
+        <div class="contact__row">
+          <button class="contact__mail" type="button" data-copy="contact@salah-taha.com">
+            <span class="term__ps">$</span> contact@salah-taha.com <small>copy</small>
+          </button>
+          <ul class="contact__links">
+            <li><a href="https://www.linkedin.com/in/salah-taha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://github.com/salah-taha" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href="https://pub.dev/packages/mqtt_server" target="_blank" rel="noopener">pub.dev ↗</a></li>
           </ul>
         </div>
-        <footer class="foot">
-          <span>© <span data-year></span> Salah Taha</span>
-          <span>Cairo, Egypt</span>
-          <a href="#top">Back to top ↑</a>
-        </footer>
       </div>
     </section>
   </main>
+
+  <footer class="status">
+    <span class="status__ok"><span class="dot"></span>all systems operational</span>
+    <span>Cairo <b data-clock>--:--</b></span>
+    <span class="status__hide">uptime <b data-uptime>—</b></span>
+    <span>© <span data-year></span> Salah Taha</span>
+    <a href="#top">top ↑</a>
+  </footer>
+
+  <!-- command palette -->
+  <div class="pal" data-pal hidden>
+    <div class="pal__scrim" data-pal-close></div>
+    <div class="pal__box" role="dialog" aria-modal="true" aria-label="Command palette">
+      <div class="pal__search">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="M10.5 10.5 14 14"/></svg>
+        <input type="text" placeholder="Jump to a section, project or action…" aria-label="Search commands" data-pal-input spellcheck="false" autocomplete="off" />
+        <kbd>esc</kbd>
+      </div>
+      <ul class="pal__list" role="listbox" data-pal-list></ul>
+      <p class="pal__foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></p>
+    </div>
+  </div>
 
   <script type="module" src="/src/main.js"></script>
 </body>
